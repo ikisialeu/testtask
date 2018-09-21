@@ -1,0 +1,75 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    <link href="{{ asset('bundles/app/css/styles.css') }}" rel="stylesheet"/>
+{% endblock %}
+
+{% block body %}
+
+    <header>
+        <ul class="nav nav-pills">
+            <li class="nav-item">
+                <a class="nav-link active">Sign In</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active">Sign Up</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active">Sign Out</a>
+            </li>
+        </ul>
+    </header>
+
+    <section class="row">
+        <aside class="col col-md-3">
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a class="nav-link active">Active</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link">Link</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link">Link</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled">Disabled</a>
+                </li>
+            </ul>
+        </aside>
+
+        <section class="col col-md-9 text-center">
+            <div class="col col-md-12">
+                <div class="news">
+                    <a href=""><h3>News 1</h3></a>
+                </div>
+
+                <div class="news">
+                    <a href=""><h3>News 2</h3></a>
+                </div>
+
+                <div class="news">
+                    <a href=""><h3>News 3</h3></a>
+                </div>
+            </div>
+
+            <div class="col">
+                <nav class="pagination-bar">
+                    <ul class="pagination">
+                        <li><a class="disabled">&#9668</a></li>
+                        <li><a class="disabled">1</a></li>
+                        <li><a class="disabled">2</a></li>
+                        <li><a class="disabled">3</a></li>
+                        <li><a class="disabled">&#9658</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+        </section>
+
+        <section class="col col-md-4 align-self-center">
+
+        </section>
+    </section>
+
+{% endblock %}
