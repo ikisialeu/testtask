@@ -43,6 +43,12 @@ class Category
     private $dateAdded;
 
     /**
+     * @var int
+     * @ORM\Column(name="Ctg_User_Added", type="int", nullable=false, options={"comment": "User created category"})
+     */
+    private $userAdded;
+
+    /**
      * @return int
      */
     public function getId() : int
@@ -113,11 +119,31 @@ class Category
     /**
      * @param \DateTime $dateAdded
      *
-     * @return News
+     * @return Category
      */
     public function setDateAdded(\DateTime $dateAdded): self
     {
         $this->dateAdded = $dateAdded;
+
+        return $this;
+    }
+
+    /**
+     * @return int
+     */
+    public function getUserAdded (): int
+    {
+        return $this->userAdded;
+    }
+
+    /**
+     * @param int $userAdded
+     *
+     * @return Category
+     */
+    public function setUserAdded (int $userAdded): self
+    {
+        $this->userAdded = $userAdded;
 
         return $this;
     }

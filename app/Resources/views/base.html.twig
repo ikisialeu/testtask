@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8" />
-        <title>{% block title %}Test task{% endblock %}</title>
-        <link rel="stylesheet" href="{{ asset('build/css/app.css') }}"/>
+<head>
+    <meta charset="UTF-8"/>
+    <title>{% block title %}Test task{% endblock %}</title>
+    <link rel="stylesheet" href="{{ asset('build/css/app.css') }}"/>
 
-        {% block stylesheets %}{% endblock %}
-    </head>
-    <body>
+    {% block stylesheets %}{% endblock %}
+</head>
+<body>
+    <div class="container">
         {% block body %}{% endblock %}
         {% block javascripts %}{% endblock %}
-    </body>
+
+        <footer>2018</footer>
+    </div>
+</body>
 </html>

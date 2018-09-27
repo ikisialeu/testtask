@@ -43,9 +43,15 @@ class News
     /**
      * @var \DateTime
      *
-     * @ORM\Column(name="Nws_Date_Added", type="datetime", nullable=false)
+     * @ORM\Column(name="Nws_Date_Added", type="datetime", nullable=false, options={"comment": "Date of news creation"}))
      */
     private $dateAdded;
+
+    /**
+     * @var int
+     * @ORM\Column(name="Nws_User_Added", type="int", nullable=false, options={"comment": "User created news"})
+     */
+    private $userAdded;
 
     /**
      * @return int
@@ -143,6 +149,26 @@ class News
     public function setDateAdded(\DateTime $dateAdded): self
     {
         $this->dateAdded = $dateAdded;
+
+        return $this;
+    }
+
+    /**
+     * @return int
+     */
+    public function getUserAdded (): int
+    {
+        return $this->userAdded;
+    }
+
+    /**
+     * @param int $userAdded
+     *
+     * @return Category
+     */
+    public function setUserAdded (int $userAdded): self
+    {
+        $this->userAdded = $userAdded;
 
         return $this;
     }
